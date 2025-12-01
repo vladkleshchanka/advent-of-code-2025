@@ -9,23 +9,65 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		18773FB82EDC5E2900552556 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18773FC62EDC5E4200552556 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		18773FBA2EDC5E2900552556 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
+		18773FBA2EDC5E2900552556 /* Practice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Practice; sourceTree = BUILT_PRODUCTS_DIR; };
+		18773FC82EDC5E4200552556 /* Day 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 1"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		18773FD12EDC5FF500552556 /* Exceptions for "Practise" folder in "Copy Files" phase from "Practice" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 18773FB82EDC5E2900552556 /* CopyFiles */;
+			membershipExceptions = (
+				Input.txt,
+				Input2.txt,
+				Input3.txt,
+				Input4.txt,
+			);
+		};
+		18773FDA2EDD7A6D00552556 /* Exceptions for "Day 1" folder in "Copy Files" phase from "Day 1" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 18773FC62EDC5E4200552556 /* CopyFiles */;
+			membershipExceptions = (
+				input_test.txt,
+				input.txt,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		18773FBC2EDC5E2900552556 /* AdventOfCode */ = {
+		18773FBC2EDC5E2900552556 /* Practise */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AdventOfCode;
+			exceptions = (
+				18773FD12EDC5FF500552556 /* Exceptions for "Practise" folder in "Copy Files" phase from "Practice" target */,
+			);
+			path = Practise;
+			sourceTree = "<group>";
+		};
+		18773FC92EDC5E4200552556 /* Day 1 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				18773FDA2EDD7A6D00552556 /* Exceptions for "Day 1" folder in "Copy Files" phase from "Day 1" target */,
+			);
+			path = "Day 1";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -38,13 +80,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18773FC52EDC5E4200552556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		18773FB12EDC5E2900552556 = {
 			isa = PBXGroup;
 			children = (
-				18773FBC2EDC5E2900552556 /* AdventOfCode */,
+				18773FBC2EDC5E2900552556 /* Practise */,
+				18773FC92EDC5E4200552556 /* Day 1 */,
 				18773FBB2EDC5E2900552556 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,7 +102,8 @@
 		18773FBB2EDC5E2900552556 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18773FBA2EDC5E2900552556 /* AdventOfCode */,
+				18773FBA2EDC5E2900552556 /* Practice */,
+				18773FC82EDC5E4200552556 /* Day 1 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18773FB92EDC5E2900552556 /* AdventOfCode */ = {
+		18773FB92EDC5E2900552556 /* Practice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18773FC12EDC5E2900552556 /* Build configuration list for PBXNativeTarget "AdventOfCode" */;
+			buildConfigurationList = 18773FC12EDC5E2900552556 /* Build configuration list for PBXNativeTarget "Practice" */;
 			buildPhases = (
 				18773FB62EDC5E2900552556 /* Sources */,
 				18773FB72EDC5E2900552556 /* Frameworks */,
@@ -73,13 +124,35 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				18773FBC2EDC5E2900552556 /* AdventOfCode */,
+				18773FBC2EDC5E2900552556 /* Practise */,
 			);
-			name = AdventOfCode;
+			name = Practice;
 			packageProductDependencies = (
 			);
 			productName = AdventOfCode;
-			productReference = 18773FBA2EDC5E2900552556 /* AdventOfCode */;
+			productReference = 18773FBA2EDC5E2900552556 /* Practice */;
+			productType = "com.apple.product-type.tool";
+		};
+		18773FC72EDC5E4200552556 /* Day 1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18773FCC2EDC5E4200552556 /* Build configuration list for PBXNativeTarget "Day 1" */;
+			buildPhases = (
+				18773FC42EDC5E4200552556 /* Sources */,
+				18773FC52EDC5E4200552556 /* Frameworks */,
+				18773FC62EDC5E4200552556 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				18773FC92EDC5E4200552556 /* Day 1 */,
+			);
+			name = "Day 1";
+			packageProductDependencies = (
+			);
+			productName = day1;
+			productReference = 18773FC82EDC5E4200552556 /* Day 1 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -93,6 +166,9 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					18773FB92EDC5E2900552556 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					18773FC72EDC5E4200552556 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
@@ -111,13 +187,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18773FB92EDC5E2900552556 /* AdventOfCode */,
+				18773FB92EDC5E2900552556 /* Practice */,
+				18773FC72EDC5E4200552556 /* Day 1 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18773FB62EDC5E2900552556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18773FC42EDC5E4200552556 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,6 +357,32 @@
 			};
 			name = Release;
 		};
+		18773FCD2EDC5E4200552556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PA54HJVY9J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		18773FCE2EDC5E4200552556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PA54HJVY9J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -285,11 +395,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18773FC12EDC5E2900552556 /* Build configuration list for PBXNativeTarget "AdventOfCode" */ = {
+		18773FC12EDC5E2900552556 /* Build configuration list for PBXNativeTarget "Practice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18773FC22EDC5E2900552556 /* Debug */,
 				18773FC32EDC5E2900552556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18773FCC2EDC5E4200552556 /* Build configuration list for PBXNativeTarget "Day 1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18773FCD2EDC5E4200552556 /* Debug */,
+				18773FCE2EDC5E4200552556 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

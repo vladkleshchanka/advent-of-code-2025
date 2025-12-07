@@ -33,36 +33,54 @@ func part1() async throws {
             }
         }
     }
-    print(sums.reduce(0, +))
-    print(values)
+    let result = sums.reduce(0, +)
+    print(result)
+    assert(result == 5060053676136)
 }
 
 func part2() async throws {
     var matrix = [[Character]]()
-    var operands = [Character]()
+    var operands = [String]()
     var sums = [Int]()
 
     for try await line in url.lines {
         if line.contains("+") || line.contains("*") {
-            operands = line.split(separator: " ", omittingEmptySubsequences: true)
+            operands = line.split(separator: " ", omittingEmptySubsequences: true).map { String($0) }
         } else {
             matrix.append(Array(line))
         }
     }
-    let in = """
-    123 328  51 64 
-     45 64  387 23 
-      6 98  215 314
-    *   +   *   +  
-    """
+
+
     var currentBucket = [Int]()
     let height = matrix.count
     let width = matrix[0].count
-    for i in (0..<width).inverted() {
-        let value = String((0..<height).map { matrix[i][j] })
-        if let 
+
+
+    func calculateBucket() {
+        let operand = operands.popLast()
+        if operand == "+" {
+            sums.append(currentBucket.reduce(0, +))
+        } else if operand == "*" {
+            sums.append(currentBucket.reduce(1, *))
+        }
     }
+
+    for i in (0..<width).reversed() {
+        let value = String((0..<height).map { matrix[$0][i] })
+        if let number = Int(value.trimmingCharacters(in: .whitespaces)) {
+            currentBucket.append(number)
+        } else {
+            calculateBucket()
+            currentBucket = []
+        }
+    }
+    calculateBucket()
+    let result = sums.reduce(0, +)
+    print(result)
+    assert(result == 9695042567249)
 }
+
 
 try await part1()
 try await part2()

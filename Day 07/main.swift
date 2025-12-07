@@ -7,8 +7,8 @@
 
 import Foundation
 
-//let url = URL(fileURLWithPath: "input_test.txt")
-let url = URL(fileURLWithPath: "input.txt")
+let url = URL(fileURLWithPath: "input_test.txt")
+//let url = URL(fileURLWithPath: "input.txt")
 
 func part1() async throws {
     var matrix = [[Character]]()
@@ -41,41 +41,8 @@ func part1() async throws {
     print(beamSplits)
 }
 
-
-func part2_recursion() async throws {
-    func quantumTachyon(beamIndex: Int, slice: ArraySlice<[Character]>, acc: inout Int) {
-        var slice = slice
-        guard slice.count > 0 else { return }
-        let nextLine = slice.first!
-        slice = slice.dropFirst()
-        if nextLine[beamIndex] == "^" {
-            quantumTachyon(beamIndex: beamIndex - 1, slice: slice, acc: &acc)
-            quantumTachyon(beamIndex: beamIndex + 1, slice: slice, acc: &acc)
-            acc += 1
-        } else {
-            quantumTachyon(beamIndex: beamIndex, slice: slice, acc: &acc)
-        }
-    }
-
-    var matrix = [[Character]]()
-    var numberOfTimelines = 1
-
-    for try await line in url.lines {
-        matrix.append(Array(line))
-    }
-
-    let beamIndex = matrix[0].firstIndex(of: "S")!
-    quantumTachyon(beamIndex: beamIndex, slice: matrix[1..<matrix.count], acc: &numberOfTimelines)
-
-//    for i in 0..<matrix.count {
-//        print(String(matrix[i]))
-//    }
-    print(numberOfTimelines)
-}
-
 func part2() async throws {
     var matrix = [[String]]()
-
     for try await line in url.lines {
         matrix.append(Array(line.map { String($0) }))
         if matrix.count == 1 { continue }
@@ -99,15 +66,32 @@ func part2() async throws {
     }
 
     let result = matrix.last!.compactMap { Int($0) }.reduce(0, +)
-    for i in 0..<matrix.count {
-        print(matrix[i].reduce("", +))
-    }
+//    for i in 0..<matrix.count {
+//        print(matrix[i].reduce("", +))
+//    }
     print(result)
 }
 
+func part2_better() async throws {
+    var timelines = [Int]()
 
-//try await part1()
-let date = Date().timeIntervalSinceReferenceDate
-try await part2()
-print(Date().timeIntervalSinceReferenceDate - date)
+    // Build
+    for try await line in url.lines.prefix(1) {
+        timelines = Array(repeating: 0, count: line.count)
+        timelines[line.firstIndex(of: "S")!.utf16Offset(in: line)] = 1
+    }
 
+    for try await line in url.lines {
+        for (index, character) in line.enumerated() where character == "^" {
+            timelines[index - 1] += timelines[index]
+            timelines[index + 1] += timelines[index]
+            timelines[index] = 0
+        }
+    }
+
+    let result = timelines.reduce(0, +)
+    print(result)
+}
+
+try await part1()
+try await part2_better()

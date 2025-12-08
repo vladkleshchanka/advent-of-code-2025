@@ -7,11 +7,12 @@
 
 import Foundation
 
-print("Happy XMAS ho-ho-ho!")
-//try await day1()
-try await day10()
+//try await day1_p1()
+//try await day1_p2()
+//try await day10()
+try await Day2().main()
 
-func day1() async throws {
+func day1_p1() async throws {
     let url = URL(fileURLWithPath: "input.txt")
 
     var array1 = [Int]()
@@ -28,6 +29,27 @@ func day1() async throws {
     for i in 0..<array1.count {
         let diff = abs(array1[i] - array2[i])
         sum += diff
+    }
+    print(sum)
+}
+
+func day1_p2() async throws {
+    let url = URL(fileURLWithPath: "input.txt")
+    var sum = 0
+
+    var leftList = [Int: Int]()
+    var rightList = [Int: Int]()
+    for try await line in url.lines {
+        let components = line.split(separator: " ", omittingEmptySubsequences: true)
+        let left = Int(components[0])!
+        let right = Int(components[1])!
+        leftList[left] = (leftList[left] ?? 0) + 1
+        rightList[right] = (rightList[right] ?? 0) + 1
+    }
+
+    for left in leftList {
+        guard let right = rightList[left.key] else { continue }
+        sum += left.key * left.value * right
     }
     print(sum)
 }

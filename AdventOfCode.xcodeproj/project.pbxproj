@@ -97,6 +97,8 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 18773FB82EDC5E2900552556 /* CopyFiles */;
 			membershipExceptions = (
+				2024_day2_test.txt,
+				2024_day2.txt,
 				Input.txt,
 				Input2.txt,
 				Input3.txt,

@@ -98,6 +98,7 @@
 		18CA33782EE3F238001D218B /* Day 06 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 06"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CA33882EE56D80001D218B /* Day 07 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 07"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CA339F2EE6B74A001D218B /* Day 08 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 08"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CA551B2EE85C5B001D218B /* Day 09.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 09.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EB19822EDEDDDE006CFC10 /* Day 02 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 02"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EB49382EE00F91006CFC10 /* Day 03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 03"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -232,6 +233,11 @@
 			path = "Day 08";
 			sourceTree = "<group>";
 		};
+		18CA551C2EE85C5B001D218B /* Day 09 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Day 09";
+			sourceTree = "<group>";
+		};
 		18EB19832EDEDDDE006CFC10 /* Day 02 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Day 02";
@@ -297,6 +303,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18CA55182EE85C5B001D218B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18EB197F2EDEDDDE006CFC10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +339,7 @@
 				18CA33792EE3F238001D218B /* Day 06 */,
 				18CA33892EE56D80001D218B /* Day 07 */,
 				18CA33A02EE6B74A001D218B /* Day 08 */,
+				18CA551C2EE85C5B001D218B /* Day 09 */,
 				18773FBB2EDC5E2900552556 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				18CA33782EE3F238001D218B /* Day 06 */,
 				18CA33882EE56D80001D218B /* Day 07 */,
 				18CA339F2EE6B74A001D218B /* Day 08 */,
+				18CA551B2EE85C5B001D218B /* Day 09.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -503,6 +518,28 @@
 			productReference = 18CA339F2EE6B74A001D218B /* Day 08 */;
 			productType = "com.apple.product-type.tool";
 		};
+		18CA551A2EE85C5B001D218B /* Day 09 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18CA55232EE85C5D001D218B /* Build configuration list for PBXNativeTarget "Day 09" */;
+			buildPhases = (
+				18CA55172EE85C5B001D218B /* Sources */,
+				18CA55182EE85C5B001D218B /* Frameworks */,
+				18CA55192EE85C5B001D218B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				18CA551C2EE85C5B001D218B /* Day 09 */,
+			);
+			name = "Day 09";
+			packageProductDependencies = (
+			);
+			productName = "Day 09 2";
+			productReference = 18CA551B2EE85C5B001D218B /* Day 09.app */;
+			productType = "com.apple.product-type.application";
+		};
 		18EB19812EDEDDDE006CFC10 /* Day 02 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18EB19882EDEDDDE006CFC10 /* Build configuration list for PBXNativeTarget "Day 02" */;
@@ -578,6 +615,9 @@
 					18CA339E2EE6B74A001D218B = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
+					18CA551A2EE85C5B001D218B = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 					18EB19812EDEDDDE006CFC10 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -609,9 +649,20 @@
 				18CA33772EE3F238001D218B /* Day 06 */,
 				18CA33872EE56D80001D218B /* Day 07 */,
 				18CA339E2EE6B74A001D218B /* Day 08 */,
+				18CA551A2EE85C5B001D218B /* Day 09 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18CA55192EE85C5B001D218B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18773FB62EDC5E2900552556 /* Sources */ = {
@@ -657,6 +708,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		18CA339B2EE6B74A001D218B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18CA55172EE85C5B001D218B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -982,6 +1040,75 @@
 			};
 			name = Release;
 		};
+		18CA55242EE85C5D001D218B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PA54HJVY9J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "paramount.Day-09-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18CA55252EE85C5D001D218B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PA54HJVY9J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "paramount.Day-09-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		18EB19862EDEDDDE006CFC10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1105,6 +1232,15 @@
 			buildConfigurations = (
 				18CA33A42EE6B74A001D218B /* Debug */,
 				18CA33A52EE6B74A001D218B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18CA55232EE85C5D001D218B /* Build configuration list for PBXNativeTarget "Day 09" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18CA55242EE85C5D001D218B /* Debug */,
+				18CA55252EE85C5D001D218B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

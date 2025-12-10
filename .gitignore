@@ -6,3 +6,4 @@
 *.pbxuser
 xcuserdata
 
+*/input.txt

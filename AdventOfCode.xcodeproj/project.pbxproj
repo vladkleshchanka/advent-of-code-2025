@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1870E5C02EEEAC4600A87C01 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18773FB82EDC5E2900552556 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -110,6 +119,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1870E5C22EEEAC4600A87C01 /* Day 12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 12"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18773FBA2EDC5E2900552556 /* Practice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Practice; sourceTree = BUILT_PRODUCTS_DIR; };
 		18773FC82EDC5E4200552556 /* Day 01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 01"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B3F6992EEAEFE5004DF6C9 /* Day 11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Day 11"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +225,11 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		1870E5C32EEEAC4600A87C01 /* Day 12 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Day 12";
+			sourceTree = "<group>";
+		};
 		18773FBC2EDC5E2900552556 /* Practise */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -308,6 +323,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1870E5BF2EEEAC4600A87C01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18773FB72EDC5E2900552556 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +432,7 @@
 				18CA551C2EE85C5B001D218B /* Day 09 */,
 				18CA96B32EE942B4001D218B /* Day 10 */,
 				18B3F69A2EEAEFE5004DF6C9 /* Day 11 */,
+				1870E5C32EEEAC4600A87C01 /* Day 12 */,
 				18773FBB2EDC5E2900552556 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -429,6 +452,7 @@
 				18CA551B2EE85C5B001D218B /* Day 09.app */,
 				18CA96B22EE942B4001D218B /* Day 10 */,
 				18B3F6992EEAEFE5004DF6C9 /* Day 11 */,
+				1870E5C22EEEAC4600A87C01 /* Day 12 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,6 +460,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1870E5C12EEEAC4600A87C01 /* Day 12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1870E5C62EEEAC4600A87C01 /* Build configuration list for PBXNativeTarget "Day 12" */;
+			buildPhases = (
+				1870E5BE2EEEAC4600A87C01 /* Sources */,
+				1870E5BF2EEEAC4600A87C01 /* Frameworks */,
+				1870E5C02EEEAC4600A87C01 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1870E5C32EEEAC4600A87C01 /* Day 12 */,
+			);
+			name = "Day 12";
+			packageProductDependencies = (
+			);
+			productName = "Day 12";
+			productReference = 1870E5C22EEEAC4600A87C01 /* Day 12 */;
+			productType = "com.apple.product-type.tool";
+		};
 		18773FB92EDC5E2900552556 /* Practice */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18773FC12EDC5E2900552556 /* Build configuration list for PBXNativeTarget "Practice" */;
@@ -710,6 +756,9 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					1870E5C12EEEAC4600A87C01 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 					18773FB92EDC5E2900552556 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -774,6 +823,7 @@
 				18CA551A2EE85C5B001D218B /* Day 09 */,
 				18CA96B12EE942B4001D218B /* Day 10 */,
 				18B3F6982EEAEFE5004DF6C9 /* Day 11 */,
+				1870E5C12EEEAC4600A87C01 /* Day 12 */,
 			);
 		};
 /* End PBXProject section */
@@ -789,6 +839,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1870E5BE2EEEAC4600A87C01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18773FB62EDC5E2900552556 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -876,6 +933,32 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		1870E5C72EEEAC4600A87C01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PA54HJVY9J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1870E5C82EEEAC4600A87C01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PA54HJVY9J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		18773FBF2EDC5E2900552556 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1354,6 +1437,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1870E5C62EEEAC4600A87C01 /* Build configuration list for PBXNativeTarget "Day 12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1870E5C72EEEAC4600A87C01 /* Debug */,
+				1870E5C82EEEAC4600A87C01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		18773FB52EDC5E2900552556 /* Build configuration list for PBXProject "AdventOfCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

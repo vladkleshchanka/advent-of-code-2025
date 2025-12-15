@@ -52,40 +52,23 @@ struct Day_09_2App: App {
     }
 
     func part2() async throws {
-        var points = [CGPoint]()
-        let linePath = CGMutablePath()
-
-        for try await line in url.lines {
-            let coords = line.split(separator: ",").map { Double(Int($0)!) }
+        let points = try await url.lines.reduce(into: [CGPoint]()) { points, line in
+            let coords = line.split(separator: ",").map { Double($0)! }
             let point = CGPoint(x: coords[0], y: coords[1])
             points.append(point)
-            if linePath.isEmpty {
-                linePath.move(to: point)
-            } else {
-                linePath.addLine(to: point)
-                
-            }
         }
-        linePath.closeSubpath()
 
-        let rectPath = CGMutablePath()
-        for i in 1..<points.count {
-            let rect = CGRect(p1: points[i - 1], p2: points[i])
-            rectPath.addRect(rect)
-        }
-        rectPath.addRect(CGRect(p1: points[points.count - 1], p2: points[0]))
+        let rectPath = zip(points, points.dropFirst()).reduce(into: CGMutablePath()) { path, points in
+            path.addRect(CGRect(p1: points.0, p2: points.1))
+        }.normalized()
 
-        let rects = points.flatMap { p1 in
-            points.map { p2 in
-                CGRect(p1: p1, p2: p2)
-            }
-        }.sorted(by: { $0.area > $1.area })
-
-        let theBiggest = rects.first(where: {
-            let adjustedRect = $0.insetBy(dx: 1, dy: 1)
-            return adjustedRect.vertices.allSatisfy { linePath.contains($0) } && !rectPath.intersects(CGPath(rect: adjustedRect, transform: nil))
-        })!
-
+        let theBiggest = points
+            .flatMap { p1 in points.map { p2 in CGRect(p1: p1, p2: p2) } }
+            .sorted(by: { $0.area > $1.area })
+            .first(where: {
+                let adjustedRect = $0.insetBy(dx: 1, dy: 1)
+                return !rectPath.intersects(CGPath(rect: adjustedRect, transform: nil))
+            })!
         print("Part 2 - \(theBiggest.area == 1574717268.0)")
         part2 = part2.replacingOccurrences(of: "...", with: String(Int(theBiggest.area)))
     }
@@ -97,7 +80,6 @@ extension CGRect {
         let y = min(p1.y, p2.y)
         let width = abs(p2.x - p1.x) + 1
         let height = abs(p2.y - p1.y) + 1
-
         self = .init(x: x, y: y, width: width, height: height)
     }
 
